@@ -10,8 +10,6 @@ import toshiba from '../../../assets/icons/toshiba.png'
 import dell from '../../../assets/icons/dell.png'
 import DashboardGrid from '../../../components/dashboardGrid';
 import Footer from '../../../components/footer';
-import DetailsHeader from '../../../components/detailsHeader';
-import ItemDetails from '../../../components/itemDetails';
 
 
 const layoutStyle = {
@@ -20,23 +18,26 @@ const layoutStyle = {
     width: 'calc(100% - 8px)',
     maxWidth: 'calc(100% - 8px)',
 };
-const ProductDetails = () => {
+const FavScreen = () => {
 
 
 
-    const bestSellingData = new Array(4).fill(0)
+    const feturedData = new Array(8).fill(0)
+
+
 
 
     return (
         <Flex gap="middle" wrap="wrap">
             <Layout style={layoutStyle}>
                 <MainHeader />
-                {/* <ItemDetails /> */}
 
 
 
 
-                <DashboardGrid data={bestSellingData} label={"Search Recomendations"} />
+                <DashboardGrid isFav={true} data={feturedData} label={"My Favorites"} />
+
+
 
 
                 <Footer />
@@ -46,4 +47,4 @@ const ProductDetails = () => {
         </Flex>
     )
 };
-export default ProductDetails;
+export default FavScreen;

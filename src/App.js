@@ -11,6 +11,7 @@ import ProductDetails from './screens/mainScreens/productDetails/productDetails'
 import Cart from './screens/mainScreens/cart';
 import ProductDetailPage from './screens/TestScreen';
 import Checkout from './screens/mainScreens/checkout';
+import FavScreen from './screens/mainScreens/favList';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
 
           {/* mains */}
           <Route path="/home" element={<HomeScreen />} />
+          <Route path="/favorites" element={<FavScreen />} />
           <Route path="/productDetails" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />

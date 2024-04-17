@@ -1,32 +1,56 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import iconHeart from '../../assets/icons/iconHeart.png'
+import iconHeartfill from '../../assets/icons/iconHeartfill.png'
+import iconFuel from '../../assets/icons/iconFuel.png'
+import iconCapacity from '../../assets/icons/iconCapacity.png'
+import iconWheel from '../../assets/icons/iconWheel.png'
 
 const DashboardGrid = (props) => {
 
     return (
-        <div className="px-4 md:px-8 lg:px-16 xl:px-20">
-            <p className="text-center mt-8 font-semibold text-2xl">{props.label}</p>
-            <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-8">
-                <div className="flex flex-wrap justify-center md:justify-start md:space-x-8">
-                    {props.menuList.map((item, index) => (
-                        <p key={index} className="text-black text-xs font-semibold mt-4 md:mt-0">{item}</p>
-                    ))}
-                </div>
-                <div className="bg-black justify-center hidden md:flex md:w-auto md:py-1">
-                    <span className="text-white text-xs">Show All</span>
-                </div>
-            </div>
+        <div className="px-[4%] mt-8">
+            <p className="text-blue-600 font-semibold text-xl">{props.label}</p>
+
             <div className="flex flex-wrap justify-center md:justify-start mx-auto mt-6">
                 {props.data.map((item, index) => (
                     <Link key={index} to={"/productDetails"} className="w-full md:w-1/4 p-4">
-                        <div className="bg-white rounded-xl shadow-md flex flex-col items-center justify-center py-4">
-                            <div className="flex justify-center">
-                                <img src={"https://basitcomputers.com/wp-content/uploads/2022/09/wd-500.jpg"} className="max-w-full h-auto" alt="Product" />
+                        <div className="bg-white rounded-xl shadow-md flex flex-col items-center justify-center py-4 px-2">
+                            <div className="flex justify-between  w-full px-3">
+                                <div>
+                                    <p className="text-lg text-black font-bold">Car Name</p>
+                                    <p className="text-sm font-semibold text-gray-400">Model/Brand</p>
+                                </div>
+                                <img className='h-5 mt-2' src={iconHeart} />
                             </div>
-                            <p className="text-sm font-semibold mt-4 text-center">ST4000NM0023 - Seagate 4TB 7200RPM SAS 6Gb/s 128MB 3.5-Inch</p>
-                            <div className="flex justify-between mt-2 w-full px-3">
-                                <p className="text-sm text-gray-500">Hard Drive</p>
-                                <p className="text-sm text-black font-semibold">$63.85</p>
+                            <div className="flex justify-center mt-4">
+                                <img className=" w-11/12 rounded-xl h-auto shadow-md" src={"https://goodtimelimo.ca/wp-content/uploads/2023/09/Night-Out-Limousine-service-in-Newmarket-1024x507.png"} alt="Product" />
+                            </div>
+                            <div className='flex items-center mt-4 justify-between w-full px-3' >
+                                <div className='flex items-center' >
+                                    <img className='h-6' src={iconFuel} />
+                                    <span className=' ml-1 text-sm text-slate-400' >70L</span>
+                                </div>
+                                <div className='flex items-center' >
+                                    <img className='h-6' src={iconWheel} />
+                                    <span className=' ml-1 text-sm text-slate-400' >Manual</span>
+                                </div>
+                                <div className='flex items-center' >
+                                    <img className='h-6' src={iconCapacity} />
+                                    <span className=' ml-1 text-sm text-slate-400' >6 People</span>
+                                </div>
+                            </div>
+                            <div className="flex justify-between mt-4 w-full px-3">
+                                <div>
+                                    <div>
+                                        <span className="text-lg text-black font-bold">$72.00/</span>
+                                        <span className="text-sm font-semibold text-gray-400"> day</span>
+                                    </div>
+                                    <p className="text-sm font-semibold text-gray-400">$80.00</p>
+                                </div>
+                                <div className='bg-blue-600 item-center py-2 rounded-md px-3 h-2/4' >
+                                    <p className='text-white'>Book Now</p>
+                                </div>
                             </div>
                         </div>
                     </Link>

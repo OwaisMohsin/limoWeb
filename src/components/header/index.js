@@ -38,7 +38,9 @@ const MainHeader = (props) => {
 
 
                 <div className='flex'>
-                    <img className="h-8 w-auto mr-4" src={headerHeart} />
+                    <Link to={"/favorites"}>
+                        <img className="h-8 w-auto mr-4" src={headerHeart} />
+                    </Link>
                     <img className="h-8 w-auto mr-4" src={headerSetting} />
                     <img className="h-8 w-auto" src={profile} />
                 </div>
