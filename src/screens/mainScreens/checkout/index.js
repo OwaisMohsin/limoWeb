@@ -1,6 +1,9 @@
 import React from 'react';
 import { Layout, Flex } from 'antd';
 import MainHeader from '../../../components/header';
+import iconDropdown from '../../../assets/icons/iconDropdown.png'
+import iconCards from '../../../assets/icons/iconCards.png'
+import mark from '../../../assets/icons/mark.png'
 
 
 import Footer from '../../../components/footer';
@@ -24,157 +27,207 @@ const Checkout = () => {
                 <MainHeader isCart={true} />
 
                 <div className="container mx-auto py-8 px-[4%]">
-                    <h2 className="text-2xl font-bold mb-4">CHECKOUT</h2>
-                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                    <p className="text-blue-600 font-semibold text-xl">Confirm Booking</p>
+                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-6">
                         {/* Left Section: User Input Form */}
                         <div className="lg:col-span-3">
-                            <h2 className="font-semibold mb-4">Billing Detail</h2>
-                            <form className="space-y-4">
-                                <div className='flex justify-between' >
+                            <div className=" bg-white rounded-lg p-4">
+                                <h2 className="font-semibold text-xl">Customer Info</h2>
+                                <div className='flex justify-between mt-2' >
+                                    <p className='text-slate-400 text-xs' >Please enter your info</p>
+                                    <p className='text-slate-400 text-xs font-semibold' >Step 1 of 4</p>
+                                </div>
+                                <div className='flex justify-between mt-4' >
                                     <div className='w-4/6' >
-                                        <label htmlFor="firstName" className="block">First Name <span className='text-red-600' >*</span></label>
-                                        <input type="text" id="firstName" name="firstName" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
+                                        <label htmlFor="firstName" className="block font-semibold ">Name <span className='text-red-600' >*</span></label>
+                                        <input type="text" placeholder='Your name' id="firstName" name="firstName" className="w-full bg-slate-100 border-gray-300 rounded-md px-4 py-2 mt-2" />
                                     </div>
-                                    <div className='w-4/6 ml-3' >
-                                        <label htmlFor="lastName" className="block">Last Name <span className='text-red-600' >*</span></label>
-                                        <input type="text" id="lastName" name="lastName" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
+                                    <div className='w-4/6 ml-5' >
+                                        <label htmlFor="lastName" className="block font-semibold">Number <span className='text-red-600' >*</span></label>
+                                        <input type="text" placeholder='Phone number' id="lastName" name="lastName" className="w-full bg-slate-100 border-gray-300 rounded-md px-4 py-2 mt-2" />
                                     </div>
                                 </div>
-                                <div>
-                                    <label htmlFor="company" className="block">Company Name <span className='text-slate-400' >(Optional)</span></label>
-                                    <input type="text" id="address" name="address" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
+                                <div className='flex justify-between mt-4' >
+                                    <div className='w-4/6' >
+                                        <label htmlFor="firstName" className="block font-semibold">Address <span className='text-red-600' >*</span></label>
+                                        <input type="text" placeholder='Address' id="firstName" name="firstName" className="w-full bg-slate-100 border-gray-300 rounded-md px-4 py-2 mt-2" />
+                                    </div>
+                                    <div className='w-4/6 ml-5' >
+                                        <label htmlFor="lastName" className="block font-semibold">Town/City <span className='text-red-600' >*</span></label>
+                                        <input type="text" placeholder='Town or city' id="lastName" name="lastName" className="w-full bg-slate-100 border-gray-300 rounded-md px-4 py-2 mt-2" />
+                                    </div>
                                 </div>
-                                <div>
-                                    <label htmlFor="company" className="block">Country / Region <span className='text-red-600' >*</span></label>
-                                    <input type="text" id="address" name="address" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
+                            </div>
+                            <div className=" bg-white rounded-lg p-4 mt-6">
+                                <h2 className="font-semibold text-xl">Booking Info</h2>
+                                <div className='flex justify-between mt-2' >
+                                    <p className='text-slate-400 text-xs' >Please select your booking date</p>
+                                    <p className='text-slate-400 text-xs font-semibold' >Step 2 of 4</p>
                                 </div>
+                                <div className='flex  mt-4 items-center'>
+                                    <img className='h-3' src={mark} alt="Mark" />
+                                    <p className='font-semibold ml-2'>Booking From</p>
+                                </div>
+                                <div className='flex justify-between mt-4' >
+                                    <div className='w-4/6' >
+                                        <label htmlFor="firstName" className="block font-semibold ">Location <span className='text-red-600' >*</span></label>
+                                        <div className='flex justify-between items-center w-full bg-slate-100 border-gray-300 rounded-md px-4 py-2 mt-2'>
+                                            <p className=' text-slate-500 mr-4'>City</p>
+                                            <img className='h-4' src={iconDropdown} alt="Dropdown" />
+                                        </div>
+                                    </div>
+                                    <div className='w-4/6 ml-5' >
+                                        <label htmlFor="lastName" className="block font-semibold">Date <span className='text-red-600' >*</span></label>
+                                        <div className='flex justify-between items-center w-full bg-slate-100 border-gray-300 rounded-md px-4 py-2 mt-2'>
+                                            <p className=' text-slate-500 mr-4'>Date</p>
+                                            <img className='h-4' src={iconDropdown} alt="Dropdown" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='flex justify-between mt-4' >
+                                    <div className='w-4/6' >
+                                        <label htmlFor="firstName" className="block font-semibold">Time <span className='text-red-600' >*</span></label>
+                                        <div className='flex mt-2 justify-between items-center w-full bg-slate-100 border-gray-300 rounded-md px-4 py-2 mt-2'>
+                                            <p className=' text-slate-500 mr-4'>Time</p>
+                                            <img className='h-4' src={iconDropdown} alt="Dropdown" />
+                                        </div>
+                                    </div>
+                                    <div className='w-4/6 ml-5' >
+                                    </div>
+                                </div>
+                                <div className='flex  mt-4 items-center'>
+                                    <img className='h-3' src={mark} alt="Mark" />
+                                    <p className='font-semibold ml-2'>Booking Till</p>
+                                </div>
+                                <div className='flex justify-between mt-4' >
+                                    <div className='w-4/6' >
+                                        <label htmlFor="firstName" className="block font-semibold ">Time <span className='text-red-600' >*</span></label>
+                                        <div className='flex justify-between items-center w-full bg-slate-100 border-gray-300 rounded-md px-4 py-2 mt-2'>
+                                            <p className=' text-slate-500 mr-4'>Time</p>
+                                            <img className='h-4' src={iconDropdown} alt="Dropdown" />
+                                        </div>
+                                    </div>
+                                    <div className='w-4/6 ml-5' >
+                                        <label htmlFor="lastName" className="block font-semibold">Date <span className='text-red-600' >*</span></label>
+                                        <div className='flex justify-between items-center w-full bg-slate-100 border-gray-300 rounded-md px-4 py-2 mt-2'>
+                                            <p className=' text-slate-500 mr-4'>Date</p>
+                                            <img className='h-4' src={iconDropdown} alt="Dropdown" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                                <div>
-                                    <label htmlFor="address" className="block">Street Address</label>
-                                    <input placeholder='House number and street name ...' type="text" id="address" name="address" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
-                                    <input placeholder='Apartment, suite, unit, etc (Optional)' type="text" id="address" name="address" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
+
+
+                            <div className=" bg-white rounded-lg p-4 mt-6">
+                                <h2 className="font-semibold text-xl">Payment Method</h2>
+                                <div className='flex justify-between mt-2' >
+                                    <p className='text-slate-400 text-xs' >Please enter your payment method</p>
+                                    <p className='text-slate-400 text-xs font-semibold' >Step 3 of 4</p>
                                 </div>
-                                <div>
-                                    <label htmlFor="company" className="block">Town / City <span className='text-red-600' >*</span></label>
-                                    <input type="text" id="address" name="address" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
+                                <div className='bg-slate-200 pb-4 p-2 px-4 rounded-lg mt-4' >
+
+                                    <div className='flex mt-4 items-center'>
+                                        <img className='h-3' src={mark} alt="Mark" />
+                                        <div className='flex justify-between items-center w-full' >
+                                            <p className='font-semibold ml-2'>Credit Card</p>
+                                            <img className='h-4 justify-end' src={iconCards} alt="Mark" />
+                                        </div>
+                                    </div>
+                                    <div className='flex justify-between mt-4' >
+                                        <div className='w-4/6' >
+                                            <label htmlFor="firstName" className="block font-semibold ">Card Number <span className='text-red-600' >*</span></label>
+                                            <input type="text" placeholder='Card number' id="firstName" name="firstName" className="w-full bg-white border-gray-300 rounded-md px-4 py-2 mt-2" />
+                                        </div>
+                                        <div className='w-4/6 ml-5' >
+                                            <label htmlFor="lastName" className="block font-semibold">Expiration <span className='text-red-600' >*</span></label>
+                                            <input type="text" placeholder='DD/MM/YY' id="lastName" name="lastName" className="w-full bg-white border-gray-300 rounded-md px-4 py-2 mt-2" />
+                                        </div>
+                                    </div>
+                                    <div className='flex justify-between mt-4' >
+                                        <div className='w-4/6' >
+                                            <label htmlFor="firstName" className="block font-semibold">Card Holder <span className='text-red-600' >*</span></label>
+                                            <input type="text" placeholder='Card holder' id="firstName" name="firstName" className="w-full bg-white border-gray-300 rounded-md px-4 py-2 mt-2" />
+                                        </div>
+                                        <div className='w-4/6 ml-5' >
+                                            <label htmlFor="lastName" className="block font-semibold">CVC <span className='text-red-600' >*</span></label>
+                                            <input type="text" placeholder='CVC' id="lastName" name="lastName" className="w-full bg-white border-gray-300 rounded-md px-4 py-2 mt-2" />
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <label htmlFor="company" className="block">State / Country <span className='text-red-600' >*</span></label>
-                                    <input type="text" id="address" name="address" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
+                            </div>
+
+                            <div className=" bg-white rounded-lg p-4 mt-6">
+                                <h2 className="font-semibold text-xl">Confirmation</h2>
+                                <div className='flex justify-between mt-2' >
+                                    <p className='text-slate-400 text-xs' >We are getting to the end. Just few clicks and your booking is ready!</p>
+                                    <p className='text-slate-400 text-xs font-semibold' >Step 4 of 4</p>
                                 </div>
-                                <div>
-                                    <label htmlFor="company" className="block">Zip Code <span className='text-red-600' >*</span></label>
-                                    <input type="text" id="address" name="address" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
-                                </div>
-                                <div>
-                                    <label htmlFor="company" className="block">Phone Number <span className='text-red-600' >*</span></label>
-                                    <input type="text" id="address" name="address" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
-                                </div>
-                                <div>
-                                    <label htmlFor="company" className="block">Email Address <span className='text-red-600' >*</span></label>
-                                    <input type="text" id="address" name="address" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
-                                </div>
-                                <div className='flex justify-between items-center'>
-                                    <input className='text-black' type="checkbox" />
-                                    <span className='flex-1 ml-2'>Create an account?</span>
+                                <div className='flex bg-slate-200 mt-4 p-2 px-4 rounded-md items-center' >
+                                    <input className='text-black size-3' type="checkbox" />
+                                    <p className='ml-3 font-semibold' >I agree with sending an Marketing and newsletter emails. No spam, promissed!</p>
 
                                 </div>
-                                <div>
-                                    <label htmlFor="additionalNotes" className="block font-semibold">Additional Information</label>
-                                    <textarea id="additionalNotes" name="additionalNotes" rows="3" className="w-full border border-gray-300 rounded-md px-4 py-2"></textarea>
+                                <div className='flex bg-slate-200 my-4 p-2 px-4 rounded-md items-center' >
+                                    <input className='text-black size-3' type="checkbox" />
+                                    <p className='ml-3 font-semibold' >I agree with our terms and conditions and privacy policy.</p>
+
                                 </div>
-                            </form>
+                                <button onClick={() => { }} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                                    Book Now
+                                </button>
+                            </div>
+
+
                         </div>
 
                         {/* Right Section: Product Details and Card Input Form */}
                         <div className="lg:col-span-2">
-                            <h2 className="font-semibold mb-4">Your Order</h2>
-                            <div className="bg-slate-200 px-4 py-4 rounded-lg" >
-                                <div className='flex border-b-2 border-slate-300 justify-between pb-2' >
-                                    <p className='text-xs text-slate-500' >PRODUCT</p>
-                                    <p className='text-xs text-slate-500' >SUB TOTAL</p>
-                                </div>
+                            <div className="bg-white px-4 py-4 rounded-lg" >
+                                <h2 className="font-semibold text-xl">Booking Summary</h2>
+                                <p className='text-slate-400 text-xs mt-2' >Prices may change depending on the length of the booking and the price of your booked car.</p>
 
-                                <div className="mt-2 flex items-center">
+
+                                <div className="mt-6 flex items-center">
                                     {/* Image on the left */}
                                     <div className="mr-2">
                                         <img
-                                            src={"https://static-01.daraz.pk/p/643e97248bd6d5d20d2526436e73f186.jpg_750x750.jpg_.webp"}
+                                            src={"https://goodtimelimo.ca/wp-content/uploads/2023/09/Night-Out-Limousine-service-in-Newmarket-1024x507.png"}
                                             alt="Icon"
-                                            className="h-10 w-10 object-cover"
+                                            className="h-20 w-30 object-cover rounded-lg"
                                         />
                                     </div>
 
-                                    {/* Text and description on the right */}
-                                    <div>
-                                        <h3 className="text-xs font-semibold w-10/12">ST4000NM0023 - Seagate 4TB 7200RPM
-                                            SAS 6Gb/s 128MB 3.5-Inch</h3>
-                                        <p className="text-gray-400 text-xs">x 3</p>
-                                    </div>
+                                    <h3 className="text-2xl font-semibold w-10/12 ml-2">Nissan GT - R</h3>
                                 </div>
                                 <div className='flex border-b-2 border-slate-300 justify-between pb-2 mt-4' >
-                                    <p className='text-xs text-black' >Worlwide standard shipping fee</p>
-                                    <p className='text-xs text-red-500' >+$9.50</p>
+
                                 </div>
 
                                 <div className='flex  justify-between pb-2 mt-4' >
-                                    <p className='text-xs font-bold text-black' >Order Total</p>
-                                    <p className='text-xs font-bold text-green-500' >$1,746.50</p>
+                                    <p className=' text-slate-400' >Subtotal</p>
+                                    <p className='font-bold' >$80.00</p>
+                                </div>
+                                <div className='flex  justify-between pb-2 mt-4' >
+                                    <p className=' text-slate-400' >Tax</p>
+                                    <p className='font-bold' >$0.00</p>
                                 </div>
 
-                            </div>
-                            <div className="bg-slate-300 px-4 py-4 rounded-lg" >
-                                <div className='flex items-start'>
-                                    <input className='text-black' type="checkbox" />
-                                    <div className='ml-2 -mt-1' >
-                                        <span className='font-bold text-xs '>Direct Bank Transfer</span>
-                                        <p className='text-xs text-slate-500' >
-                                            Make your payment directly into our bank account. Please use your
-                                            Order ID as the payment reference. Your order will not be shipped
-                                            until the funds have cleared in our account.
-                                        </p>
+
+                                <div className='flex bg-slate-200 mt-4 p-2 px-4 rounded-md items-center justify-between' >
+                                    <input placeholder='Apply promo code' className='text-black bg-slate-200' />
+                                    <p className='font-semibold' >Apply Now</p>
+
+                                </div>
+
+
+                                <div className='flex justify-between w-full mt-4 items-center' >
+                                    <div>
+                                        <p className=' text-xl font-semibold' >Total Booking Price</p>
+                                        <p className=' text-slate-400' >Overall price and includes booking discount</p>
                                     </div>
-
-                                </div>
-                                <div className='flex items-start mt-3'>
-                                    <input className='text-black' type="checkbox" />
-                                    <div className='ml-2 -mt-1' >
-                                        <span className='font-bold text-xs '>Cash on Delivery</span>
-                                    </div>
-
-                                </div>
-
-
-                                <div className='flex items-center mt-3'>
-                                    <input className='text-black' type="checkbox" />
-                                    <span className='ml-2 font-bold text-xs '>Credit Card</span>
-                                </div>
-                                <div className='mt-2' >
-                                    <label htmlFor="firstName" className="block">Full Name </label>
-                                    <input placeholder='First and last name' type="text" id="firstName" name="firstName" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
-                                </div>
-                                <div className='mt-2' >
-                                    <label htmlFor="firstName" className="block">Card Number</label>
-                                    <input placeholder='**** **** **** *****' type="text" id="firstName" name="firstName" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
-                                </div>
-                                <div className='flex justify-between mt-2' >
-                                    <div className='w-4/6' >
-                                        <label htmlFor="firstName" className="block">Card Expiry </label>
-                                        <input placeholder='09/24' type="text" id="firstName" name="firstName" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
-                                    </div>
-                                    <div className='w-4/6 ml-3' >
-                                        <label htmlFor="lastName" className="block">CVV</label>
-                                        <input placeholder='1234' type="text" id="lastName" name="lastName" className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1" />
-                                    </div>
-                                </div>
-
-                                <div className='flex items-center mt-3'>
-                                    <input className='text-black' type="checkbox" />
-                                    <span className='ml-2 text-xs '>Save for future use</span>
-                                </div>
-
-                                <div className="flex justify-center bg-black rounded-md mt-4 px-2 py-3" >
-                                    <span className="text-xs text-white" >PLACE ORDER</span>
+                                    <p className=' text-2xl font-bold' >$80.00</p>
                                 </div>
 
                             </div>

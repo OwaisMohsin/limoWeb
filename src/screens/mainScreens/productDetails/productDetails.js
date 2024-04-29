@@ -31,7 +31,9 @@ const ProductDetails = () => {
         <Flex gap="middle" wrap="wrap">
             <Layout style={layoutStyle}>
                 <MainHeader />
-                {/* <ItemDetails /> */}
+                <p className="text-blue-600 font-semibold text-xl mt-6 mx-8">Car Details/Reviews </p>
+
+                <ItemDetails />
 
 
 

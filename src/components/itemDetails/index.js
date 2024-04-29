@@ -1,129 +1,66 @@
 import React from "react";
-import fb from '../../assets/icons/fb.png';
-import insta from '../../assets/icons/insta.png';
-import linkedin from '../../assets/icons/linkedin.png';
-import twiter from '../../assets/icons/twiter.png';
-import inStock from '../../assets/icons/inStock.png';
-import paypal from '../../assets/icons/paypal.png';
-import truckShip from '../../assets/icons/truckShip.png';
+
+import iconHeartfill from '../../assets/icons/iconHeartfill.png';
+import { useNavigate } from "react-router-dom";
 
 const ItemDetails = () => {
-    const socialIcons = [fb, insta, linkedin, twiter];
-    const category = new Array(3).fill(0);
-    const memorySize = new Array(4).fill(0);
+
+    const navigate = useNavigate()
+
 
     return (
-        <div className="container px-[4%] py-8 mt-8">
-            <div className="grid grid-cols-1 lg:grid-cols-9 gap-8">
-                <div className="lg:col-span-3">
-                    <div className="mb-4">
-                        <img
-                            src={"https://www.donordrives.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/S/c/Scanitto_2018-02-05_051_1.jpg"}
-                            alt="Big Product"
-                            className="w-4/5 md:w-3/5 lg:w-4/5 xl:w-full"
-                        />
-                    </div>
-                    <div className="grid grid-cols-3 gap-1">
-                        {new Array(3).fill(0).map((_, index) => (
-                            <img
-                                key={index}
-                                src={"https://www.donordrives.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/S/c/Scanitto_2018-02-05_051_1.jpg"}
-                                alt={`Small Product ${index + 1}`}
-                                className="w-7/12 cursor-pointer"
-                            />
-                        ))}
-                    </div>
+        <div className="flex justify-center mt-6">
+            <div className="flex flex-col lg:flex-row w-full max-w-screen-xl">
+                {/* Left Section */}
+                <div className="md:px-0 px-4 flex-1 lg:mr-4 mb-4 lg:mb-0">
+                    <img
+                        src="https://goodtimelimo.ca/wp-content/uploads/2023/09/Night-Out-Limousine-service-in-Newmarket-1024x507.png"
+                        alt="Product"
+                        className="w-full h-full object-cover rounded-xl shadow-md"
+                    />
                 </div>
 
-                <div className="lg:col-span-4">
-                    <h2 className="text-xl lg:text-2xl font-semibold mb-4">ST4000NM0023 - Seagate 4TB 7200RPM SAS 6Gb/s 128MB 3.5-Inch </h2>
-                    <h4 className="text-lg lg:text-xl font-semibold mb-4">$569.00 - $609.00</h4>
-                    <ul className="list-disc border-b-2 mb-4 pl-16 pb-4">
-                        <li className="text-sm text-black" > Intel LGA 1700 Socket: Supports 13th & 12th Gen Intel Core</li>
-                        <li className="text-sm text-black" >DDR5 Compatible: 4*SMD DIMMs with XMP 3.0 Memory</li>
-                        <li className="text-sm text-black" > Commanding Power Design: Twin 16+1+2 Phases Digital VRM</li>
-                    </ul>
-
-                    <div className="mt-4">
-                        <span className="font-semibold text-black">CATEGORY:</span>
-                        <span className="text-sm text-gray-400"> Category 1</span>
-                    </div>
-                    <div className="flex flex-wrap mt-2">
-                        {category.map((_, index) => (
-                            <div key={index} className="border border-gray-300 p-2 flex items-center mr-4 mb-2 rounded-xl">
-                                <img
-                                    src={"https://static-01.daraz.pk/p/643e97248bd6d5d20d2526436e73f186.jpg_750x750.jpg_.webp"}
-                                    alt={`Icon ${index + 1}`}
-                                    className="h-6 w-auto mr-2 object-cover"
-                                />
-                                <p className="text-gray-600">Category {index + 1}</p>
+                {/* Right Section */}
+                <div className="flex-1 px-4 md:px-0">
+                    <div className="max-w-md bg-white mx-auto p-4  rounded-xl">
+                        <div className="flex justify-between" >
+                            <h2 className="text-3xl font-bold mb-4">Nissan GT - R</h2>
+                            <img className="h-4 w-auto mt-2" src={iconHeartfill} />
+                        </div>
+                        <p className="text-slate-500 mb-4">
+                            NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most unforgiving proving ground, the "race track".
+                        </p>
+                        <div className="flex justify-between items-center" >
+                            <p className="text-gray-700 text-lg">
+                                Car model: <span className="text-slate-400">Brand</span>
+                            </p>
+                            <p className="text-gray-700 text-lg">
+                                Capacity: <span className="text-slate-400">2 Person</span>
+                            </p>
+                        </div>
+                        <div className="flex justify-between items-center mt-4" >
+                            <p className="text-gray-700 text-lg">
+                                Steering: <span className="text-slate-400">Manual</span>
+                            </p>
+                            <p className="text-gray-700 text-lg">
+                                Gasoline: <span className="text-slate-400">70L</span>
+                            </p>
+                        </div>
+                        <div className="flex justify-between items-center my-4 mt-8">
+                            <div>
+                                <span className="text-lg font-semibold">$80.00/ <span className="text-sm text-slate-400" >days</span></span>
+                                <p className="text-slate-400 line-through" >$100.00</p>
                             </div>
-                        ))}
-                    </div>
-
-                    <div className="mt-2">
-                        <span className="font-semibold text-black">MEMORY SIZE:</span>
-                        <span className="text-sm text-gray-400"> 128GB</span>
-                    </div>
-                    <div className="flex flex-wrap mt-2">
-                        {memorySize.map((_, index) => (
-                            <div key={index} className="border border-gray-300 p-2 flex items-center mr-4 mb-2 rounded-xl">
-                                <span className="text-sm text-gray-400">128GB</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="flex items-center space-x-4 mt-4">
-                        {socialIcons.map((icon, index) => (
-                            <div key={index} className="h-8 w-8 flex items-center justify-center bg-gray-300 rounded-full">
-                                <img
-                                    src={icon}
-                                    alt={`Social Icon ${index + 1}`}
-                                    className="h-4 w-4 object-cover rounded-full"
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                <div className="lg:col-span-2">
-                    <div className="bg-slate-200 px-4 py-4 rounded-lg">
-                        <p className="text-xs text-gray-500">TOTAL PRICE:</p>
-                        <p className="text-lg font-bold">$609.00</p>
-                        <div className="flex items-center mt-4">
-                            <img className="h-3 w-3" src={inStock} alt="In Stock" />
-                            <span className="text-xs ml-2">In Stock</span>
+                            <button onClick={() => { navigate("/checkout") }} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                                Book Now
+                            </button>
                         </div>
-
-                        <div className="flex items-center justify-between bg-white rounded-md mt-4 px-2 py-2">
-                            <span className="text-lg font-bold">-</span>
-                            <span className="text-lg font-bold">1</span>
-                            <span className="text-lg font-bold">+</span>
-                        </div>
-
-                        <div className="flex items-center justify-center bg-black rounded-md mt-4 px-2 py-3">
-                            <span className="text-xs text-white">ADD TO CART</span>
-                        </div>
-
-                        <div className="flex items-center justify-center bg-gray-300 rounded-md mt-4 px-2">
-                            <span className="text-xs text-black font-semibold">BUY WITH</span>
-                            <img className="w-10 ml-2" src={paypal} alt="Paypal" />
-                        </div>
-
-                        <p className="text-xs mt-4">Guaranteed Safe Checkout</p>
                     </div>
-
-                    <div className="bg-slate-200 px-4 py-4 rounded-lg mt-2">
-                        <div className="flex items-center justify-center bg-gray-800 rounded-md mt-4 px-2 py-3">
-                            <span className="text-xs text-white">Quick Order 24/7</span>
-                        </div>
-                        <p className="font-bold mt-4">(025) 3886 25 16</p>
-                    </div>
-
-                    <div className="mt-4 flex items-center">
-                        <img className="h-4 w-5" src={truckShip} alt="Truck Ship" />
-                        <span className="ml-2 text-gray-500 text-sm">Ships from </span>
-                        <span className="text-black font-bold text-sm ml-1"> United States</span>
+                    {/* Image row */}
+                    <div className="flex justify-center lg:mt-8">
+                        <img src="https://goodtimelimo.ca/wp-content/uploads/2023/09/Night-Out-Limousine-service-in-Newmarket-1024x507.png" alt="Image 1" className="object-cover w-1/3 lg:w-1/5 rounded-lg h-24 lg:h-auto mb-4 lg:mb-0 lg:mr-4" />
+                        <img src="https://goodtimelimo.ca/wp-content/uploads/2023/09/Night-Out-Limousine-service-in-Newmarket-1024x507.png" alt="Image 2" className="object-cover mx-2 md:ml-0 w-1/3 lg:w-1/5 rounded-lg h-24 lg:h-auto mb-4 lg:mb-0 lg:mx-4" />
+                        <img src="https://goodtimelimo.ca/wp-content/uploads/2023/09/Night-Out-Limousine-service-in-Newmarket-1024x507.png" alt="Image 3" className="object-cover w-1/3 lg:w-1/5 rounded-lg h-24 lg:h-auto" />
                     </div>
                 </div>
             </div>
