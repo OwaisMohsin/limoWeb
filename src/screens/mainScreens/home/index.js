@@ -30,17 +30,17 @@ const HomeScreen = () => {
                 <MainHeader />
                 <div className='flex justify-center' >
                     <div className='absolute left-[6%] lg:mt-[6%] md:mt-[4%] sm:mt-[2%]' >
-                        <h2 className='text-white md:text-2xl lg:text-4xl sm:text-xl font-semibold mt-4 ' >
+                        <h2 className='text-white md:text-2xl lg:text-4xl sm:text-xl font-semibold mt-8 md:mt-4 ' >
                             Easy way to book a<br></br>Limousine at a low price
                         </h2>
-                        <p className='text-white text-xl hidden md:block  mt-4' >
+                        <p className='text-white text-xs md:text-xl  md:block  mt-4' >
                             Providing cheap car booking services<br></br>and safe and comfortable facilities
                         </p>
-                        <div className='bg-blue-500 item-center py-2 rounded-md px-3 w-3/4 md:w-2/6 mt-[1%] md:mt-[8%]' >
+                        <div className='bg-blue-500 item-center py-2 rounded-md px-3 w-3/4 md:w-2/6 mt-[4%] md:mt-[8%]' >
                             <p className='text-white text-center'>Book Now</p>
                         </div>
                     </div>
-                    <img className='mt-4 w-11/12' src={webBanner} />
+                    <img className='mt-4 w-11/12 md:h-auto h-44 object-cover ' src={webBanner} />
                 </div>
 
 

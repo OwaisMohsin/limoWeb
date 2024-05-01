@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const ItemDetails = () => {
 
     const navigate = useNavigate()
+    const images = new Array(3).fill(0)
 
 
     return (
@@ -56,11 +57,16 @@ const ItemDetails = () => {
                             </button>
                         </div>
                     </div>
+
                     {/* Image row */}
-                    <div className="flex justify-center lg:mt-8">
-                        <img src="https://goodtimelimo.ca/wp-content/uploads/2023/09/Night-Out-Limousine-service-in-Newmarket-1024x507.png" alt="Image 1" className="object-cover w-1/3 lg:w-1/5 rounded-lg h-24 lg:h-auto mb-4 lg:mb-0 lg:mr-4" />
-                        <img src="https://goodtimelimo.ca/wp-content/uploads/2023/09/Night-Out-Limousine-service-in-Newmarket-1024x507.png" alt="Image 2" className="object-cover mx-2 md:ml-0 w-1/3 lg:w-1/5 rounded-lg h-24 lg:h-auto mb-4 lg:mb-0 lg:mx-4" />
-                        <img src="https://goodtimelimo.ca/wp-content/uploads/2023/09/Night-Out-Limousine-service-in-Newmarket-1024x507.png" alt="Image 3" className="object-cover w-1/3 lg:w-1/5 rounded-lg h-24 lg:h-auto" />
+                    <div className="flex flex-row overflow-x-auto justify-center lg:mt-8 md:px-4">
+                        {
+                            images.map((item, index) => {
+                                return (
+                                    <img key={index} src={"https://goodtimelimo.ca/wp-content/uploads/2023/09/Night-Out-Limousine-service-in-Newmarket-1024x507.png"} alt={`Image ${index + 1}`} className="ml-4 rounded-lg h-24 mt-4 lg:mb-0" />
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>
