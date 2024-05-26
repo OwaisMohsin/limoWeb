@@ -12,11 +12,12 @@ import Cart from './screens/mainScreens/cart';
 import ProductDetailPage from './screens/TestScreen';
 import Checkout from './screens/mainScreens/checkout';
 import FavScreen from './screens/mainScreens/favList';
+import LandingScreen from './screens/mainScreens/landing';
 
 
 function App() {
   return (
-    <div>
+    <div  >
       <Router>
         <Routes>
           <Route path="/" element={<LoginScreen />} />
@@ -27,6 +28,7 @@ function App() {
 
 
           {/* mains */}
+          <Route path="/main" element={<LandingScreen />} />
           <Route path="/home" element={<HomeScreen />} />
           <Route path="/favorites" element={<FavScreen />} />
           <Route path="/productDetails" element={<ProductDetails />} />

@@ -23,13 +23,13 @@ const SignupScreen = () => {
     //     };
 
     return (
-        <div className="flex flex-col md:flex-row justify-center items-center">
+        <div className="flex flex-col md:flex-row justify-center bg-black items-center">
             <div className="md:mr-20">
                 {/* Signup Form */}
                 <div className="mx-5 md:mx-0 w-auto">
                     <SignupLogo />
-                    <h6 className='text-center mt-2 mb-4 text-xl '>Welcome</h6>
-                    <h2 className='mt-6 mb-6'>Provide details for account Creation</h2>
+                    <h6 className='text-center mt-2 mb-4 text-xl text-white'>Welcome</h6>
+                    <h2 className='mt-6 mb-6 text-white'>Provide details for account Creation</h2>
                     <Form
                         name="signup_form"
                         initialValues={{ remember: true }}
@@ -42,21 +42,21 @@ const SignupScreen = () => {
                         >
                             <Input style={{ width: 400 }} prefix={<UserOutlined />} placeholder="Email" />
                         </Form.Item> */}
-                        <span className='font-semibold'>Email</span>
+                        <span className='font-semibold text-white'>Email</span>
                         <Form.Item
                             name="email"
                             rules={[{ required: true, message: 'Please input your email!' }]}
                         >
                             <Input prefix={<UserOutlined />} placeholder="Email" />
                         </Form.Item>
-                        <span className='font-semibold'>Password</span>
+                        <span className='font-semibold text-white'>Password</span>
                         <Form.Item
                             name="password"
                             rules={[{ required: true, message: 'Please input your password!' }]}
                         >
                             <Input.Password prefix={<LockOutlined />} placeholder="Password" />
                         </Form.Item>
-                        <span className='font-semibold'>Confirm Password</span>
+                        <span className='font-semibold text-white'>Confirm Password</span>
                         <Form.Item
                             name="cpassword"
                             rules={[{ required: true, message: 'Please input your confirm password!' }]}
@@ -68,7 +68,7 @@ const SignupScreen = () => {
                         <Form.Item>
 
                             <Link to={"/home"}>
-                                <Button type="primary" htmlType="submit" style={{ width: '100%', backgroundColor: "#3563E9" }}>
+                                <Button type="primary" htmlType="submit" style={{ width: '100%', backgroundColor: "#f0d192" }}>
                                     Signup
                                 </Button>
                             </Link>
@@ -78,7 +78,7 @@ const SignupScreen = () => {
 
                         <p className='text-neutral-400'>Already have an account? </p>
                         <Link to={"/"}>
-                            <span className='font-semibold ml-2 text-blue-600'>Login</span>
+                            <span className='font-semibold ml-2 text-primary-gold'>Login</span>
                         </Link>
                     </div>
                 </div>

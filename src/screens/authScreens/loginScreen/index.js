@@ -23,33 +23,27 @@ const LoginScreen = () => {
     //     };
 
     return (
-        <div className="flex flex-col md:flex-row justify-center items-center">
+        <div className="flex flex-col md:flex-row justify-center items-center bg-black">
             <div className="md:mr-20">
                 {/* Signup Form */}
                 <div className="mx-5 md:mx-0 w-auto">
                     <SignupLogo />
-                    <h6 className='text-center mt-2 mb-4 text-xl '>Welcome back</h6>
-                    <h2 className='mt-6 mb-6'>Login to continue</h2>
+                    <h6 className='text-center mt-2 mb-4 text-xl text-white'>Welcome back</h6>
+                    <h2 className='mt-6 mb-6 text-white'>Login to continue</h2>
                     <Form
                         name="signup_form"
                         initialValues={{ remember: true }}
                         onFinish={onFinish}
                     >
-                        {/* <span className='font-semibold'>Email</span>
-                        <Form.Item
-                            name="email"
-                            rules={[{ required: true, message: 'Please input your email!' }]}
-                        >
-                            <Input style={{ width: 400 }} prefix={<UserOutlined />} placeholder="Email" />
-                        </Form.Item> */}
-                        <span className='font-semibold'>Email</span>
+
+                        <span className='font-semibold text-white'>Email</span>
                         <Form.Item
                             name="email"
                             rules={[{ required: true, message: 'Please input your email!' }]}
                         >
                             <Input prefix={<UserOutlined />} placeholder="Email" />
                         </Form.Item>
-                        <span className='font-semibold'>Password</span>
+                        <span className='font-semibold text-white'>Password</span>
                         <Form.Item
                             name="password"
                             rules={[{ required: true, message: 'Please input your password!' }]}
@@ -57,8 +51,8 @@ const LoginScreen = () => {
                             <Input.Password prefix={<LockOutlined />} placeholder="Password" />
                         </Form.Item>
                         <div className='flex justify-between items-center mb-8'>
-                            <input className='text-black' type="checkbox" onChange={handleChange} />
-                            <span className='flex-1 ml-2'>Remember Me</span>
+                            <input className='text-white' type="checkbox" onChange={handleChange} />
+                            <span className='flex-1 ml-2 text-white'>Remember Me</span>
                             {/* <Link to={"/forgotPassword"}>
                                 <span className='font-semibold'>Forgot Password?</span>
                             </Link> */}
@@ -67,7 +61,7 @@ const LoginScreen = () => {
                         <Form.Item>
 
                             <Link to={"/home"}>
-                                <Button type="primary" htmlType="submit" style={{ width: '100%', backgroundColor: "#3563E9" }}>
+                                <Button type="primary" htmlType="submit" style={{ width: '100%', backgroundColor: "#f0d192" }}>
                                     Log in
                                 </Button>
                             </Link>
@@ -78,14 +72,14 @@ const LoginScreen = () => {
 
                         <p className='text-neutral-400'>Don't have an account? </p>
                         <Link to={"/signup"}>
-                            <span className='font-semibold ml-2 text-blue-600'>Signup</span>
+                            <span className='font-semibold ml-2 text-primary-gold'>Signup</span>
                         </Link>
                     </div>
                     <div className='flex justify-center items-center '>
 
                         <p className='text-neutral-400'>Continue as</p>
                         <Link to={"/home"}>
-                            <span className='font-semibold ml-2 text-blue-600'>GUEST?</span>
+                            <span className='font-semibold ml-2 text-primary-gold'>GUEST?</span>
                         </Link>
                     </div>
                 </div>

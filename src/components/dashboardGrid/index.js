@@ -10,16 +10,16 @@ const DashboardGrid = (props) => {
 
     return (
         <div className="px-[4%] mt-8">
-            <p className="text-blue-600 font-semibold text-xl">{props.label}</p>
+            <p className="text-primary-gold font-semibold text-xl">{props.label}</p>
 
             <div className="flex flex-wrap justify-center md:justify-start mx-auto mt-6">
                 {props.data.map((item, index) => (
                     <Link key={index} to={"/productDetails"} className="w-full md:w-1/4 p-4">
-                        <div className="bg-white rounded-xl shadow-md flex flex-col items-center justify-center py-4 px-2">
+                        <div className="bg-slate-800 rounded-xl shadow-md flex flex-col items-center justify-center py-4 px-2">
                             <div className="flex justify-between  w-full px-3">
                                 <div>
-                                    <p className="text-lg text-black font-bold">Car Name</p>
-                                    <p className="text-sm font-semibold text-gray-400">Model/Brand</p>
+                                    <p className="text-lg text-primary-gold font-bold">Car Name</p>
+                                    <p className="text-sm font-semibold text-white">Model/Brand</p>
                                 </div>
                                 <img className='h-5 mt-2' src={iconHeart} />
                             </div>
@@ -43,12 +43,12 @@ const DashboardGrid = (props) => {
                             <div className="flex justify-between mt-4 w-full px-3">
                                 <div>
                                     <div>
-                                        <span className="text-lg text-black font-bold">$72.00/</span>
-                                        <span className="text-sm font-semibold text-gray-400"> day</span>
+                                        <span className="text-lg text-white font-bold">$72.00/</span>
+                                        <span className="text-sm font-semibold text-primary-gold"> day</span>
                                     </div>
                                     <p className="text-sm font-semibold text-gray-400">$80.00</p>
                                 </div>
-                                <div className='bg-blue-600 item-center py-2 rounded-md px-3 h-2/4' >
+                                <div className='bg-primary-gold item-center py-2 rounded-md px-3 h-2/4' >
                                     <p className='text-white'>Book Now</p>
                                 </div>
                             </div>

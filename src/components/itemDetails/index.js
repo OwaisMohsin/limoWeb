@@ -23,36 +23,36 @@ const ItemDetails = () => {
 
                 {/* Right Section */}
                 <div className="flex-1 px-4 md:px-0">
-                    <div className="max-w-md bg-white mx-auto p-4  rounded-xl">
+                    <div className="max-w-md bg-slate-800 mx-auto p-4  rounded-xl">
                         <div className="flex justify-between" >
-                            <h2 className="text-3xl font-bold mb-4">Nissan GT - R</h2>
+                            <h2 className="text-3xl font-bold mb-4 text-primary-gold">Nissan GT - R</h2>
                             <img className="h-4 w-auto mt-2" src={iconHeartfill} />
                         </div>
-                        <p className="text-slate-500 mb-4">
+                        <p className="text-white mb-4">
                             NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most unforgiving proving ground, the "race track".
                         </p>
                         <div className="flex justify-between items-center" >
-                            <p className="text-gray-700 text-lg">
-                                Car model: <span className="text-slate-400">Brand</span>
+                            <p className="text-gray-400 text-lg">
+                                Car model: <span className="text-white">Brand</span>
                             </p>
                             <p className="text-gray-700 text-lg">
-                                Capacity: <span className="text-slate-400">2 Person</span>
+                                Capacity: <span className="text-white">2 Person</span>
                             </p>
                         </div>
                         <div className="flex justify-between items-center mt-4" >
-                            <p className="text-gray-700 text-lg">
-                                Steering: <span className="text-slate-400">Manual</span>
+                            <p className="text-gray-400 text-lg">
+                                Steering: <span className="text-white">Manual</span>
                             </p>
-                            <p className="text-gray-700 text-lg">
-                                Gasoline: <span className="text-slate-400">70L</span>
+                            <p className="text-gray-400 text-lg">
+                                Gasoline: <span className="text-white">70L</span>
                             </p>
                         </div>
                         <div className="flex justify-between items-center my-4 mt-8">
                             <div>
-                                <span className="text-lg font-semibold">$80.00/ <span className="text-sm text-slate-400" >days</span></span>
+                                <span className="text-lg font-semibold text-white">$80.00/ <span className="text-sm text-primary-gold" >days</span></span>
                                 <p className="text-slate-400 line-through" >$100.00</p>
                             </div>
-                            <button onClick={() => { navigate("/checkout") }} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                            <button onClick={() => { navigate("/checkout") }} className="bg-primary-gold hover:bg-primary-gold text-white font-bold py-2 px-4 rounded">
                                 Book Now
                             </button>
                         </div>

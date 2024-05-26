@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/icons/authLogo.png'; // Import your logo image
+import logo from '../../assets/icons/headerLogo.png'; // Import your logo image
 
 const SignupLogo = () => {
     return (

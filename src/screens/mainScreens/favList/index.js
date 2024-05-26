@@ -13,7 +13,8 @@ import Footer from '../../../components/footer';
 
 
 const layoutStyle = {
-    borderRadius: 8,
+
+    backgroundColor: "#000000",
     overflow: 'hidden',
     width: 'calc(100% - 8px)',
     maxWidth: 'calc(100% - 8px)',

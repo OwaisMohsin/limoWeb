@@ -15,7 +15,7 @@ import ItemDetails from '../../../components/itemDetails';
 
 
 const layoutStyle = {
-    borderRadius: 8,
+    backgroundColor: "#000000",
     overflow: 'hidden',
     width: 'calc(100% - 8px)',
     maxWidth: 'calc(100% - 8px)',
@@ -31,7 +31,7 @@ const ProductDetails = () => {
         <Flex gap="middle" wrap="wrap">
             <Layout style={layoutStyle}>
                 <MainHeader />
-                <p className="text-blue-600 font-semibold text-xl mt-6 mx-8">Car Details/Reviews </p>
+                <p className="text-primary-gold font-semibold text-xl mt-6 mx-8">Car Details/Reviews </p>
 
                 <ItemDetails />
 

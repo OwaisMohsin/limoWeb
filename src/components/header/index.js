@@ -1,54 +1,46 @@
 import React from 'react';
-
-import profile from '../../assets/icons/profile.png'
-import search from '../../assets/icons/search.png'
-import shopping from '../../assets/icons/shopping.png'
-import headerSetting from '../../assets/icons/headerSetting.png'
-import headerLogo from '../../assets/icons/headerLogo.png'
-import headerHeart from '../../assets/icons/headerHeart.png'
 import { Link } from 'react-router-dom';
-
-
-
-
-
+import profile from '../../assets/icons/profile.png';
+import search from '../../assets/icons/search.png';
+import shopping from '../../assets/icons/shopping.png';
+import headerSetting from '../../assets/icons/headerSetting.png';
+import headerLogo from '../../assets/icons/headerLogo.png';
+import headerHeart from '../../assets/icons/headerHeart.png';
 
 const MainHeader = (props) => {
-
-
-
-
     return (
-
-        <div className='bg-white pb-4'>
-            <div className='py-4 mx-[2%] flex justify-between items-center ' >
-
-                <img className="h-8 w-auto hidden md:block" src={headerLogo} />
-
-                <div className="relative w-2/5 mr-[16%]">
-                    <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
-                        <img className="h-6 w-auto " src={search} />
-                    </span>
-                    <input
-                        type="text"
-                        placeholder={"Search something here"}
-                        className="pl-12 pr-3 py-2 border rounded-full w-full focus:outline-none focus:border-blue-500"
-                    />
-                </div>
-
-
-                <div className='flex'>
-                    <Link to={"/favorites"}>
-                        <img className="h-8 w-auto mr-4" src={headerHeart} />
+        <div className='bg-black'>
+            <div className='mx-[2%]  flex justify-between items-center'>
+                <Link to="/">
+                    <img className="h-20 w-auto hidden md:block" src={headerLogo} alt="Logo" />
+                </Link>
+                <div className="relative w-2/5 mr-[16%] flex justify-between">
+                    <Link to="/">
+                        <p className='text-primary-gold text-lg mr-4'>Home</p>
                     </Link>
-                    <img className="h-8 w-auto mr-4" src={headerSetting} />
-                    <img className="h-8 w-auto" src={profile} />
+                    <Link to="/contact">
+                        <p className='text-primary-gold  text-lg mr-4'>Contact Us</p>
+                    </Link>
+                    <Link to="/fleet">
+                        <p className='text-primary-gold  text-lg mr-4'>Fleet</p>
+                    </Link>
+                    <Link to="/services">
+                        <p className='text-primary-gold  text-lg mr-4'>Our Services</p>
+                    </Link>
+                    <Link to="/about">
+                        <p className='text-primary-gold  text-lg'>About</p>
+                    </Link>
+                </div>
+                <div className='flex'>
+                    <Link to="/favorites">
+                        <img className="h-8 w-auto mr-4" src={headerHeart} alt="Favorites" />
+                    </Link>
+                    <img className="h-8 w-auto mr-4" src={headerSetting} alt="Settings" />
+                    <img className="h-8 w-auto" src={profile} alt="Profile" />
                 </div>
             </div>
-
-
         </div>
-    )
-}
+    );
+};
 
 export default MainHeader;
