@@ -27,7 +27,7 @@ const HomeScreen = () => {
               Easy way to book <br></br> your travel need.
             </h2>
             <p className="text-black text-xs md:text-xl  md:block  mt-4">
-              Providing professional , reliable<br></br>,safe and comfortable
+              Providing professional, reliable, safe <br></br> and comfortable
               services
             </p>
             <div className="bg-primary-gold item-center py-2 rounded-md px-3 w-3/4 md:w-2/6 mt-[4%] md:mt-[8%]">
